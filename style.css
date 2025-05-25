@@ -1,0 +1,258 @@
+/* Solitary Fish Store - Modern Aquatic Theme */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    color: #184e77;
+}
+.navbar {
+    background: #023e8a;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(2,62,138,0.08);
+}
+.brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #90e0ef;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 6px #0077b6;
+    text-transform: none;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-links a, .nav-link-btn {
+    color: #caf0f8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 0.7em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.nav-links a:hover, .nav-link-btn:hover {
+    color: #00b4d8;
+    text-decoration: underline;
+}
+.cart-summary {
+    background: #fffbe7;
+    color: #333;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0e6d2;
+}
+.banner-section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #48cae4;
+    min-height: 340px;
+    border-bottom-left-radius: 60px 30px;
+    border-bottom-right-radius: 60px 30px;
+    box-shadow: 0 8px 32px rgba(2,62,138,0.10);
+    overflow: hidden;
+}
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,rgba(2,62,138,0.7) 60%,rgba(2,62,138,0.2) 100%);
+    z-index: 1;
+}
+.banner-text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 3vw;
+}
+.banner-text h1 {
+    font-size: 3.2rem;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 2px;
+    color: #caf0f8;
+    text-shadow: 1px 2px 8px #0077b6;
+}
+.banner-text p {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #e0f7fa;
+}
+.banner-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 3vw;
+    z-index: 3;
+}
+.dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.dot.active {
+    opacity: 1;
+    background: #00b4d8;
+}
+.collection-featured-image {
+    display: inline-block;
+    width: 32%;
+    margin: 1.5% 0.5%;
+    vertical-align: top;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(2,62,138,0.10);
+    background: #fff;
+}
+.collection-featured-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.featured-products {
+    max-width: 1200px;
+    margin: 3rem auto 2rem auto;
+    padding: 0 2vw;
+}
+.featured-products h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #023e8a;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.products {
+    display: flex;
+    gap: 2.5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(2,62,138,0.08);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,180,216,0.10);
+}
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: #e0f7fa;
+}
+.product h3 {
+    font-size: 1.15rem;
+    margin: 0.5rem 0 0.2rem 0;
+    color: #184e77;
+    font-weight: 600;
+}
+.price {
+    color: #00b4d8;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+}
+.view-btn {
+    background: #023e8a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: auto;
+    transition: background 0.2s;
+    display: inline-block;
+}
+.view-btn:hover {
+    background: #00b4d8;
+    color: #fff;
+}
+.site-footer {
+    background: #023e8a;
+    color: #fff;
+    padding: 2.5rem 0 1.2rem 0;
+    margin-top: 3rem;
+    border-top-left-radius: 40px 20px;
+    border-top-right-radius: 40px 20px;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer-brand {
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #90e0ef;
+}
+.footer-links a {
+    color: #fff;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #00b4d8;
+}
+.footer-social {
+    display: flex;
+    gap: 1.2rem;
+}
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #caf0f8;
+    font-size: 0.97em;
+}
+@media (max-width: 900px) {
+    .products { flex-direction: column; align-items: center; }
+    .collection-featured-image { width: 98%; margin: 1.5% 0; }
+    .footer-content { flex-direction: column; gap: 1.2rem; }
+}
+@media (max-width: 600px) {
+    .navbar { padding: 1rem 1rem; }
+    .brand { font-size: 1.3rem; }
+    .banner-section { min-height: 180px; }
+    .banner-text h1 { font-size: 2rem; }
+    .featured-products { padding: 0 0.5rem; }
+    .product { width: 98vw; }
+}
