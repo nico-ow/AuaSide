@@ -429,7 +429,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
                     <a href="add-product.php" class="view-btn" style="margin-top:1.5rem;text-align:center;">+ Add Product</a>
                 <?php endif; ?>
-                <!-- Back to Main Page Button -->
+               
                 <a href="index.php" class="view-btn" style="margin-top:1.5rem;text-align:center;background:#e0f7fa;">&larr; Back to Main Page</a>
             </aside>
              <div class="shop-products">
@@ -471,9 +471,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // ...existing JS code...
+        
 
-        // Login popup for add to cart
+        
         document.querySelectorAll('.login-popup-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 document.getElementById('login-modal').style.display = 'flex';

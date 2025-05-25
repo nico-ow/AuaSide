@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/app/includes/database.php';
-// Handle form submission
+
 if (isset($_POST['add_product'])) {
     $name = trim($_POST['name']);
     $price = floatval($_POST['price']);
@@ -12,11 +12,11 @@ if (isset($_POST['add_product'])) {
     $uploadError = '';
     $uploadedImagePath = '';
 
-    // Connect to DB
+    
     $db = new \Aries\Dbmodel\Includes\Database();
     $pdo = $db->getConnection();
 
-    // Handle image upload
+    
     if ($img['error'] === UPLOAD_ERR_OK) {
         $ext = strtolower(pathinfo($img['name'], PATHINFO_EXTENSION));
         $allowed = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
@@ -29,7 +29,7 @@ if (isset($_POST['add_product'])) {
             $targetPath = $targetDir . $filename;
             if (move_uploaded_file($img['tmp_name'], $targetPath)) {
                 $uploadedImagePath = "products/{$category}/$filename";
-                // Insert or get category
+                
                 $pdo->beginTransaction();
                 $catStmt = $pdo->prepare("SELECT id FROM product_categories WHERE category_name = ? LIMIT 1");
                 $catStmt->execute([$category]);
@@ -42,7 +42,7 @@ if (isset($_POST['add_product'])) {
                     $insertCat->execute([$category, $now, $now]);
                     $categoryId = $pdo->lastInsertId();
                 }
-                // Insert product
+               
                 $now = date('Y-m-d H:i:s');
                 $prodStmt = $pdo->prepare("INSERT INTO products (name, price, description, image, created_at, updated_at, category_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
                 $prodStmt->execute([
@@ -66,7 +66,7 @@ if (isset($_POST['add_product'])) {
         $uploadError = 'Image upload failed.';
     }
 }
-// Update categories for fish store
+
 $categories = ['Freshwater', 'Saltwater', 'Plants', 'Accessories'];
 ?>
 <!DOCTYPE html>

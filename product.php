@@ -207,7 +207,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
         </div>
     </div>
    <?php
-// ...existing code...
+
 ?>
    <main>
         <div class="product-detail-container">
@@ -238,7 +238,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
         </div>
     </main>
 
-    <!-- Login Modal -->
+    
     <div id="login-modal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);align-items:center;justify-content:center;">
         <div style="background:#fff;padding:2rem 2.5rem;border-radius:8px;max-width:350px;margin:auto;box-shadow:0 6px 32px rgba(2,62,138,0.18);position:relative;">
             <span id="close-login-modal" style="position:absolute;top:10px;right:16px;font-size:1.5rem;cursor:pointer;">&times;</span>
