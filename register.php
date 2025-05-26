@@ -292,7 +292,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12.75 2.001a1 1 0 0 1 1 1v13.25a2.25 2.25 0 1 1-2.25-2.25h.25a1 1 0 1 1 0 2h-.25a.25.25 0 1 0 .25.25V3.001a1 1 0 0 1 1-1zm6.5 0a1 1 0 0 1 1 1v2.25a5.25 5.25 0 0 1-5.25 5.25h-1.25v-2h1.25a3.25 3.25 0 0 0 3.25-3.25V3.001a1 1 0 0 1 1-1z"/></svg>
                 </a>
             </div>
-            <div class="footer-copy">©2025, Solitary Fish Store, Designed by Vienz Dinero</div>
+            <div class="footer-copy">©2025, AquaSide Fish Store, Designed by Nico Deiparine</div>
         </div>
     </footer>
 </body>
