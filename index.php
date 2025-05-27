@@ -207,33 +207,35 @@ if (isset($_SESSION['user_id'])) {
         }
         .products {
             display: flex;
-            gap: 2.5vw;
-            flex-wrap: wrap;
-            justify-content: center;
+    gap: 2.5vw;
+    flex-wrap: wrap;
+    justify-content: center;
         }
         .product {
             background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 2px 12px rgba(2,62,138,0.08);
-            padding: 1.5rem 1.2rem 1.2rem 1.2rem;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.18s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(2,62,138,0.08);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
         }
         .product:hover {
             transform: translateY(-7px) scale(1.03);
             box-shadow: 0 6px 24px rgba(0,180,216,0.10);
         }
         .product img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            background: #e0f7fa;
+           width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background: #e0f7fa;
+    box-shadow: 0 2px 8px rgba(2,62,138,0.07);
         }
         .product h3 {
             font-size: 1.15rem;
@@ -306,7 +308,7 @@ if (isset($_SESSION['user_id'])) {
             color: #caf0f8;
             font-size: 0.97em;
         }
-        /* Cart Modal Styles (unchanged) */
+      
         .cart-modal {
             position: fixed;
             z-index: 1000;

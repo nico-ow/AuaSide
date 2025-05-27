@@ -67,7 +67,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Solitary Fish Store</title>
+    <title>Shop | AquaSide Fish Store</title>
     <link rel="stylesheet" href="style.css">
     <style>
     body {
@@ -148,36 +148,37 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         border: 1px solid #ddd;
     }
     .shop-products {
-        flex: 1;
         display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: flex-start;
+    gap: 2.5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     }
     .shop-product {
         background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(2,62,138,0.07);
-        padding: 1.5rem;
-        width: 260px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: box-shadow 0.2s, transform 0.2s;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(2,62,138,0.08);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    width: 270px;
+    text-align: center;
+    transition: transform 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
     }
     .shop-product:hover {
         box-shadow: 0 6px 24px rgba(0,180,216,0.10);
         transform: translateY(-7px) scale(1.03);
     }
     .shop-product img {
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-        margin-bottom: 1rem;
-        border-radius: 8px;
-        background: #e0f7fa;
+         width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background: #e0f7fa;
+    box-shadow: 0 2px 8px rgba(2,62,138,0.07);
     }
     .shop-product h3 {
         margin: 0.5rem 0;

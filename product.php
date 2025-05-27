@@ -234,6 +234,10 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
                         <button type="button" class="login-popup-btn order-btn" style="background:#ccc;color:#888;cursor:pointer;">Login to Order</button>
                     <?php endif; ?>
                 </div>
+                <a href="shop.php" class="back-shop-btn" style="margin-top:2rem;display:inline-flex;align-items:center;gap:0.5em;background:linear-gradient(90deg,#00b4d8 0%,#48cae4 100%);color:#fff;font-weight:bold;padding:0.7rem 1.7rem;border-radius:5px;text-decoration:none;box-shadow:0 2px 8px rgba(2,62,138,0.10);transition:background 0.2s;">
+                    <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;" viewBox="0 0 20 20"><path d="M10.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L7.414 9H17a1 1 0 110 2H7.414l3.293 3.293a1 1 0 010 1.414z"/></svg>
+                    Back to Shop
+                </a>
             </div>
         </div>
     </main>
