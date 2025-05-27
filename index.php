@@ -50,9 +50,16 @@ if (isset($_POST['checkout'])) {
 $cartCount = array_sum($_SESSION['cart']);
 
 if (isset($_POST['logout'])) {
-    session_destroy();
-    header('Location: index.php');
-    exit;
+    
+    if (isset($_SESSION['user_id'])) {
+        session_destroy();
+        header('Location: index.php');
+        exit;
+    } else {
+        
+        header('Location: index.php?error=not_logged_in');
+        exit;
+    }
 }
 
 if (isset($_SESSION['user_id'])) {
@@ -344,6 +351,13 @@ if (isset($_SESSION['user_id'])) {
         }
     </style>
 </head>
+<script>
+function confirmLogout(e) {
+    if (confirm('Are you sure you want to logout?')) {
+        document.getElementById('logout-form').submit();
+    }
+}
+</script>
 <body>
     <div class="navbar">
         <a href="index.php" class="brand" style="text-decoration: none;">AquaSide Fish Store</a>
@@ -354,9 +368,10 @@ if (isset($_SESSION['user_id'])) {
             <?php endif; ?>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <span class="nav-link-btn" style="cursor:default;"> <?php echo htmlspecialchars($_SESSION['username'] ?? 'User'); ?> </span>
-                <form method="post" style="display:inline;margin:0;padding:0;">
-                    <button type="submit" name="logout" class="nav-link-btn">Logout</button>
-                </form>
+                <form id="logout-form" method="post" style="display:inline;margin:0;padding:0;">
+    <button type="button" class="nav-link-btn" onclick="confirmLogout(event)">Logout</button>
+    <input type="hidden" name="logout" value="1">
+</form>
                 <a href="#" id="cart-link">Cart (<?php echo $cartCount; ?>)</a>
             <?php else: ?>
                 <a href="register.php" id="cart-link">Cart (<?php echo $cartCount; ?>)</a>
@@ -438,19 +453,19 @@ if (isset($_SESSION['user_id'])) {
             <img src="new-arrivals-images/4.jpg" alt="Betta Fish">
             <h3>Betta Fish (Male)</h3>
             <span class="price">₱150</span>
-            <a href="product.php?id=3" class="view-btn">View Details</a>
+            <a href="product.php?id=2" class="view-btn">View Details</a>
         </div>
         <div class="product">
             <img src="new-arrivals-images/2.jpg" alt="Discus Fish">
             <h3>Discus Fish</h3>
             <span class="price">₱250</span>
-            <a href="product.php?id=2" class="view-btn">View Details</a>
+            <a href="product.php?id=1" class="view-btn">View Details</a>
         </div>
         <div class="product">
             <img src="new-arrivals-images/1.jpg" alt="Aquatic Plant">
             <h3>Java Fern (Aquatic Plant)</h3>
             <span class="price">₱100</span>
-            <a href="product.php?id=1" class="view-btn">View Details</a>
+            <a href="product.php?id=3" class="view-btn">View Details</a>
         </div>
     </div>
     </section>

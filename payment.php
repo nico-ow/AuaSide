@@ -269,8 +269,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         </div>
     </div>
-    <div class="payment-form">
+     <div class="payment-form">
         <h2>Payment Details</h2>
+        <a href="shop.php" style="display:inline-block;margin-bottom:1.2rem;color:#00b4d8;text-decoration:none;font-weight:bold;">
+            ← Back to Shop
+        </a>
         <?php if ($success): ?>
             <div class="success">Thank you for your order!<br>Your payment details have been received.</div>
             <div style="text-align:center;margin-top:1.5rem;">

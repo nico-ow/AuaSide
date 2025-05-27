@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2025 at 02:11 PM
+-- Generation Time: May 27, 2025 at 09:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,8 +70,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `created_at`, `category_id`, `updated_at`) VALUES
-(3, 'Betta Fish', 150.00, 'Gender: Male\r\nStrain: Super Red\r\nTail Type: Rose-Tail', 'products/Freshwater/prod_6832f0f858fbc8.72181644.jpg', '2025-05-25 12:29:12', 2, '2025-05-25 12:29:12'),
-(4, 'Discuss Fish', 250.00, 'Gender: Male\r\nStrain: Red Anaconda', 'products/Freshwater/prod_683306266d7037.71230756.jpg', '2025-05-25 13:59:34', 2, '2025-05-25 13:59:34');
+(1, 'Discuss Fish', 250.00, 'Gender: Male\r\nStrain: Red Anaconda', 'products/Freshwater/prod_683306266d7037.71230756.jpg', '2025-05-25 13:59:34', 2, '2025-05-25 13:59:34'),
+(2, 'Betta Fish', 150.00, 'Gender: Male\r\nStrain: Super Red\r\nTail Type: Rose-Tail', 'products/Freshwater/prod_6832f0f858fbc8.72181644.jpg', '2025-05-25 12:29:12', 2, '2025-05-25 12:29:12'),
+(3, 'Java Fern', 120.00, '1 pot small size', 'products/Plants/prod_6835695e090c71.89748529.jpg', '2025-05-27 09:27:26', 3, '2025-05-27 09:27:26');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,8 @@ CREATE TABLE `product_categories` (
 --
 
 INSERT INTO `product_categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
-(2, 'Freshwater', '2025-05-25 12:29:12', '2025-05-25 12:29:12');
+(2, 'Freshwater', '2025-05-25 12:29:12', '2025-05-25 12:29:12'),
+(3, 'Plants', '2025-05-27 09:27:26', '2025-05-27 09:27:26');
 
 -- --------------------------------------------------------
 
@@ -161,13 +163,13 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

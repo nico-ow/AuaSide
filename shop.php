@@ -212,6 +212,51 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     .shop-product button:hover {
         background: #00b4d8;
     }
+    .shop-product button,
+    .shop-product .login-popup-btn {
+        background: linear-gradient(90deg, #00b4d8 0%, #48cae4 100%);
+        color: #fff;
+        border: none;
+        padding: 0.7rem 1.3rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.13s;
+        font-size: 1.08em;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 2px 8px rgba(2,62,138,0.08);
+        letter-spacing: 0.5px;
+    }
+    .shop-product button:hover,
+    .shop-product .login-popup-btn:hover {
+        background: linear-gradient(90deg, #48cae4 0%, #00b4d8 100%);
+        transform: translateY(-2px) scale(1.03);
+        color: #fff;
+    }
+    .view-btn {
+        display: inline-block;
+        background: #fff;
+        color: #023e8a;
+        border-radius: 6px;
+        padding: 0.6rem 1.3rem;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 600;
+        border: 2px solid #00b4d8;
+        transition: background 0.2s, color 0.2s, border 0.2s, transform 0.13s;
+        margin-bottom: 0.2rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+    .view-btn:hover {
+        background: #00b4d8;
+        color: #fff;
+        border-color: #48cae4;
+        transform: translateY(-2px) scale(1.03);
+    }
     .view-btn {
         display: inline-block;
         background: #f3f3f3;

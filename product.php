@@ -185,6 +185,49 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
             padding: 0.5rem;
         }
     }
+    .back-btns-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.back-shop-btn,
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    background: linear-gradient(90deg,#00b4d8 0%,#48cae4 100%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.15rem;
+    padding: 1rem 2.2rem;
+    border-radius: 7px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(2,62,138,0.10);
+    transition: background 0.2s, transform 0.15s;
+    border: none;
+}
+.back-shop-btn:hover,
+.back-home-btn:hover {
+    background: linear-gradient(90deg,#48cae4 0%,#00b4d8 100%);
+    transform: translateY(-2px) scale(1.04);
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .back-btns-row {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    .back-shop-btn,
+    .back-home-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 0.9rem 1.2rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -214,7 +257,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
             <div class="product-detail-image">
                 <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
             </div>
-            <div class="product-detail-info">
+           <div class="product-detail-info">
                 <h2><?php echo htmlspecialchars($product['name']); ?></h2>
                 <div class="price">₱<?php echo number_format($product['price'], 2); ?></div>
                 <div class="category">Category: <?php echo htmlspecialchars($product['category_name']); ?></div>
@@ -222,6 +265,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
                 <?php if (isset($_GET['added'])): ?>
                     <div class="added-msg">Added to cart!</div>
                 <?php endif; ?>
+
                 <div class="product-detail-actions">
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <form method="post" style="display:inline;">
@@ -234,12 +278,18 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
                         <button type="button" class="login-popup-btn order-btn" style="background:#ccc;color:#888;cursor:pointer;">Login to Order</button>
                     <?php endif; ?>
                 </div>
-                <a href="shop.php" class="back-shop-btn" style="margin-top:2rem;display:inline-flex;align-items:center;gap:0.5em;background:linear-gradient(90deg,#00b4d8 0%,#48cae4 100%);color:#fff;font-weight:bold;padding:0.7rem 1.7rem;border-radius:5px;text-decoration:none;box-shadow:0 2px 8px rgba(2,62,138,0.10);transition:background 0.2s;">
-                    <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;" viewBox="0 0 20 20"><path d="M10.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L7.414 9H17a1 1 0 110 2H7.414l3.293 3.293a1 1 0 010 1.414z"/></svg>
-                    Back to Shop
-                </a>
+
+                <div class="back-btns-row">
+                    <a href="shop.php" class="back-shop-btn">
+                        <svg width="22" height="22" fill="currentColor" style="vertical-align:middle;" viewBox="0 0 20 20"><path d="M10.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L7.414 9H17a1 1 0 110 2H7.414l3.293 3.293a1 1 0 010 1.414z"/></svg>
+                        Back to Shop
+                    </a>
+                    <a href="index.php" class="back-home-btn">
+                        <svg width="22" height="22" fill="currentColor" style="vertical-align:middle;" viewBox="0 0 20 20"><path d="M10 20a1 1 0 01-1-1v-7H5a1 1 0 01-1-1V8.414a1 1 0 01.293-.707l6-6a1 1 0 011.414 0l6 6A1 1 0 0118 8.414V11a1 1 0 01-1 1h-4v7a1 1 0 01-1 1z"/></svg>
+                        Back to Home
+                    </a>
+                </div>
             </div>
-        </div>
     </main>
 
     
