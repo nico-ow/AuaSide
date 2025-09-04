@@ -271,7 +271,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-brand">Solitary Fish Store</div>
+            <div class="footer-brand">AquaSide Fish Store</div>
             <div class="footer-links">
                 <a href="#">About</a>
                 <a href="#">Contact</a>

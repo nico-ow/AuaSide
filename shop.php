@@ -20,6 +20,7 @@ if (isset($_POST['add_to_cart'])) {
         exit;
     }
 }
+
 if (isset($_POST['cart_add'])) {
     $pid = $_POST['cart_add'];
     if (isset($_SESSION['cart'][$pid])) {
